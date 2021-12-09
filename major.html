@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>MYLOGO.COM</h1>
+<hr>
+
+<h2>PORTFOLIO</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('home')"> House</button>
+  <button class="btn" onclick="filterSelection('restaurant')"> Restaurant</button>
+  <button class="btn" onclick="filterSelection('farmhouse')"> Farmhouse</button>
+  <button class="btn" onclick="filterSelection('office')"> Office</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column home">
+    <div class="content">
+      <img src="images/1.jpg" alt="House Living Room" style="width:100%">
+      <h4>House Living Room</h4>
+      <p> From the colors of the walls to the furnishings and gadgets you utilize to fill the spaces and for the same purpose we have designed it . </p>
+    </div>
+  </div>
+  <div class="column home">
+    <div class="content">
+    <img src="images/2.jpg" alt="House Main Hall" style="width:100%">
+      <h4>House Main Hall</h4>
+      <p>If you enjoy to be in comfort, you might want to entertain the idea of unleashing your creative prowess and add this design to your pad</p>
+    </div>
+  </div>
+  <div class="column home">
+    <div class="content">
+    <img src="images/3.jpg" alt="House Dining Hall" style="width:100%">
+      <h4>House Dining Hall</h4>
+      <p>When it comes to creating a beautiful and stylish space for cooking, a midcentury modern kitchen is a classic style that is completely on-trend.</p>
+    </div>
+  </div>
+  
+  <div class="column restaurant">
+    <div class="content">
+      <img src="images/r1.jpg" alt="Classic Restaurant" style="width:100%">
+      <h4>Classic Restaurant</h4>
+      <p>We have designed it in such a way that it look very auspious and catchy even within a compact space and thats what the strong point of our designing. </p>
+    </div>
+  </div>
+  <div class="column restaurant">
+    <div class="content">
+    <img src="images/r2.jpg" alt="Retro Restaurant" style="width:100%">
+      <h4>Retro Restaurant</h4>
+      <p>It's interior design is a combination of several visual and pragmatic aspects – including the colors, materials, themes, layout, lighting and function </p>
+    </div>
+  </div>
+  <div class="column restaurant">
+    <div class="content">
+    <img src="images/r3.jpg" alt="Avenue Restaurant" style="width:100%">
+      <h4>Avenue Restaurant</h4>
+      <p>we have done it's interior designing after understanding the natural light patterns and in according to that we have put hanging lights and all. </p>
+    </div>
+  </div>
+
+  <div class="column farmhouse">
+    <div class="content">
+      <img src="images/f1.jpg" alt="Farmhouse 1" style="width:100%">
+      <h4>Farmhouse</h4>
+      <p>we have made it in such way that while siting and having meals , you can enjoy the atmosphere of outside even siting inside the farmhouse.</p>
+    </div>
+  </div>
+  <div class="column farmhouse">
+    <div class="content">
+    <img src="images/f2.jpg" alt="Farmhouse 2" style="width:100%">
+      <h4>Farmhouse</h4>
+      <p>Creating a luxary bedroom retreat in your farmhouse  will offer you a cozy and inviting space that you will be delighted to retire to at the end of a long day. </p>
+    </div>
+  </div>
+  <div class="column farmhouse">
+    <div class="content">
+    <img src="images/f3.jpg" alt="Farmhouse 3" style="width:100%">
+      <h4>Farmhouse</h4>
+      <p>This modern farm house style home was designed by us and we had an awkward configuration that needed to be re-opmized to meet the lifestyle needs of family.</p>
+    </div>
+  </div>
+
+
+  <div class="column office">
+    <div class="content">
+      <img src="images/o1.jpg" alt="office 1" style="width:100%">
+      <h4>office 1</h4>
+      <p>We have made it very cool looking and we have set good colour-combinations so that employee will not get tired and can increase their performance.</p>
+    </div>
+  </div>
+  <div class="column office">
+    <div class="content">
+    <img src="images/o2.jpg" alt="office 2" style="width:100%">
+      <h4>office 2</h4>
+      <p>Making a creative office bursting with personality will help to inspire creativity and make you more productive.We have designed it for the same purpose.</p>
+    </div>
+  </div>
+  <div class="column office">
+    <div class="content">
+    <img src="images/o3.jpg" alt="office 3" style="width:100%">
+      <h4>office 3</h4>
+      <p>If you are lacking in space,  then it would be good for you. We have made it in such manner so that It is compact but still very facinating .</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
